@@ -76,5 +76,5 @@ DerivedDataCache/*
 # Starter Content etc
 Content/ThirdPartyContent*
 
-
-
+#Original Music Files
+Content/Audio/Music/WAVs/*
