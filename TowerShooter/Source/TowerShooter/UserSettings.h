@@ -19,14 +19,15 @@ public:
 	static UUserSettings* GetCustomUserSettings();
 
 	UFUNCTION(BlueprintCallable)
-	void SetSaveSlotName(FString NewValue);
+	void SetPlayTutorial(bool NewValue);
 
 	UFUNCTION(BlueprintPure)
-	FString GetSaveSlotName() const;
+	bool GetPlayTutorial() const;
 
 protected:
 	UPROPERTY(Config)
-	FString SaveSlotName;
+	bool bPlayTutorial;
+
 };
 
 

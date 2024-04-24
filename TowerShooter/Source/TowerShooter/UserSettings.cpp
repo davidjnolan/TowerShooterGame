@@ -5,7 +5,7 @@
 
 UUserSettings::UUserSettings(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {
-    SaveSlotName = TEXT("testytesttest");
+    bPlayTutorial = true;
 }
 
 UUserSettings* UUserSettings::GetCustomUserSettings()
@@ -13,12 +13,12 @@ UUserSettings* UUserSettings::GetCustomUserSettings()
     return Cast<UUserSettings>(UGameUserSettings::GetGameUserSettings());
 }
 
-void UUserSettings::SetSaveSlotName(FString NewValue)
+void UUserSettings::SetPlayTutorial(bool NewValue)
 {
-    SaveSlotName = NewValue;
+    bPlayTutorial = NewValue;
 }
 
-FString UUserSettings::GetSaveSlotName() const
+bool UUserSettings::GetPlayTutorial() const
 {
-    return SaveSlotName;
+    return bPlayTutorial;
 }
