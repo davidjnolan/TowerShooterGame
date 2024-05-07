@@ -18,15 +18,51 @@ public:
 	UFUNCTION(BlueprintCallable)
 	static UUserSettings* GetCustomUserSettings();
 
+	UFUNCTION(BlueprintPure)
+	bool GetPlayTutorial() const;
+
 	UFUNCTION(BlueprintCallable)
 	void SetPlayTutorial(bool NewValue);
 
 	UFUNCTION(BlueprintPure)
-	bool GetPlayTutorial() const;
+	bool GetShowFPS() const;
+
+	UFUNCTION(BlueprintCallable)
+	void SetShowFPS(bool NewValue);
+
+	UFUNCTION(BlueprintPure)
+	float GetVolumeMain() const;
+
+	UFUNCTION(BlueprintCallable)
+	void SetVolumeMain(float NewValue);
+
+	UFUNCTION(BlueprintPure)
+	float GetVolumeMusic() const;
+
+	UFUNCTION(BlueprintCallable)
+	void SetVolumeMusic(float NewValue);
+
+	UFUNCTION(BlueprintPure)
+	float GetVolumeFX() const;
+
+	UFUNCTION(BlueprintCallable)
+	void SetVolumeFX(float NewValue);
 
 protected:
 	UPROPERTY(Config)
-	bool bPlayTutorial;
+	bool bPlayTutorial = true;
+
+	UPROPERTY(Config)
+	bool bShowFPS = false;
+
+	UPROPERTY(Config)
+	float VolumeMain = 1.0f; 
+
+	UPROPERTY(Config)
+	float VolumeMusic = 1.0f;
+
+	UPROPERTY(Config)
+	float VolumeFX = 1.0f;
 
 };
 

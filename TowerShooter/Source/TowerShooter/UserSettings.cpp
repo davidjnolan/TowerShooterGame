@@ -13,12 +13,52 @@ UUserSettings* UUserSettings::GetCustomUserSettings()
     return Cast<UUserSettings>(UGameUserSettings::GetGameUserSettings());
 }
 
+bool UUserSettings::GetPlayTutorial() const
+{
+    return bPlayTutorial;
+}
+
 void UUserSettings::SetPlayTutorial(bool NewValue)
 {
     bPlayTutorial = NewValue;
 }
 
-bool UUserSettings::GetPlayTutorial() const
+bool UUserSettings::GetShowFPS() const
 {
-    return bPlayTutorial;
+    return bShowFPS;
+}
+
+void UUserSettings::SetShowFPS(bool NewValue)
+{
+    bShowFPS = NewValue;
+}
+
+float UUserSettings::GetVolumeMain() const
+{
+    return VolumeMain;
+}
+
+void UUserSettings::SetVolumeMain(float NewValue)
+{
+    VolumeMain = NewValue;
+}
+
+float UUserSettings::GetVolumeMusic() const
+{
+    return VolumeMusic;
+}
+
+void UUserSettings::SetVolumeMusic(float NewValue)
+{
+    VolumeMusic = NewValue;
+}
+
+float UUserSettings::GetVolumeFX() const
+{
+    return VolumeFX;
+}
+
+void UUserSettings::SetVolumeFX(float NewValue)
+{
+    VolumeFX = NewValue;
 }
