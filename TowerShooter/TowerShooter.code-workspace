@@ -15,7 +15,8 @@
 			"system_error": "cpp",
 			"__locale": "cpp",
 			"typeinfo": "cpp",
-			"xlocale": "cpp"
+			"xlocale": "cpp",
+			"*.rh": "cpp"
 		}
 	},
 	"extensions": {
