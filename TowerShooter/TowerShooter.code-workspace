@@ -16,7 +16,9 @@
 			"__locale": "cpp",
 			"typeinfo": "cpp",
 			"xlocale": "cpp",
-			"*.rh": "cpp"
+			"*.rh": "cpp",
+			"filesystem": "cpp",
+			"*.ipp": "cpp"
 		}
 	},
 	"extensions": {
