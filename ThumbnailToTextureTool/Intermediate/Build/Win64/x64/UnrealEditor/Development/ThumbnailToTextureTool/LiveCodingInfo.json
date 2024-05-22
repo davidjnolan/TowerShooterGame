@@ -1,0 +1,11 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ThumbnailToTextureTool.cpp.obj": [
+			"ThumbnailToTextureSettings.gen.cpp.obj",
+			"ThumbnailToTextureTool.init.gen.cpp.obj",
+			"ThumbnailToTextureSettings.cpp.obj",
+			"ThumbnailToTextureTool.cpp.obj"
+		]
+	}
+}
