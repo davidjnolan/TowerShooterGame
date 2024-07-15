@@ -1,0 +1,114 @@
+GOALS
+Make a fun and dynamic level that challenges the player
+Break up the gameplay, so its not always just tower defense
+Give the player an objective to work towards, with some traversal of the environment and different groups of enemies
+The mission should end with having to defend a location against a few waves of enemies, but player has to work their way towards this
+Add a boss enemy
+This level should be a real challenge
+Add some degree of non-linearity
+THEME: Infiltration
+
+
+
+
+ELEMENTS
+All enemy types
+Exploding barrels
+Conveyor belts which move the player and enemies
+Crushing machines, which do damage to players and enemies
+Pushers, which push things off conveyor belts
+
+
+
+CONSTRAINTS
+
+
+
+QUESTIONS
+Is there a way to use the building mechanics in interesting ways?
+    Build ramps to get to different areas?
+    Use Walls to block conveyor belts so player can pass through?
+
+How does the player get into the factory?
+    Breach the gates?
+    Get over a wall?
+
+
+OBJECTIVE
+The player must infiltrate a robot factory fighting or avoiding enemies to get to a central control point.
+They must then defend this control point for a few waves while important data is downloaded.
+Once the data is downloaded, the player must make their way to an evacuation point and escape.
+
+SEQUENCE
+Approach the factory
+    Player starts outside the factory
+    Player can see large defensive walls, and enemies patrolling the inside.
+    Player knows that they will trigger the enemies to attack once they breach the factory gates
+    Player has time to set up some defenses before they go into the factory
+Breach the gates
+    The player somehow gets inside the factory forecourt
+    The enemies are alerted and a battle ensues
+    This battle can introduce exploding barrels. Which the player can use now and later on in the mission.
+    Once the player destroys this wave of enemies, they are free to explore and consider their next options
+    There is a supply crate here which the player can optionally collect.
+    The player can see a couple of different ways into the building, and is free to chose which path they take.
+Inside the factory
+    Path 1
+        Path 1 is a longer path, which takes the player in at the ground level. 
+        Entering the factory at this point alerts enemies inside, which swarm to attack the player. This happens before the player has time to set up defenses.
+        Once the player defeats the enemies, they have the chance to look around. 
+        If they player explores, they will find another supply crate
+        The player finds a switch which opens the path to the next floor
+        The player proceeds up to the next floor.
+        The next floor is a factory floor, with conveyor belts moving around.
+        From here the player can see their objective. But they can also see some enemies in between who haven't been alerted.
+        The player has the option to set up some defenses before attacking.
+        Once combat begins, the player must fight the enemies and avoid the conveyor belt obstacles.
+        Once the fight has been won, the player finds a switch to open the path forward.
+        The player is free to move towards their objective.
+    Path 2
+        Path 2 brings the player in higher up in the building.
+        The player can see the enemies down below, but are able to avoid the fight if they stay up high.
+        The player can see their objective, but realises that they will have to navigate a series of conveyor belts
+        The player realises that if they fall down, they will be dropped in the middle of the enemy swarm.
+        The player has to negotiate a series of conveyor belts. 
+            Some of the conveyor belts have crusher machines on them. The player must time their movement so they are not hit by the crusher.
+            Some of the conveyor belts have pusher machines on them. The player must time their movement so they are not pushed off.
+            Some of the conveyor belts will speed up the player's movement, some will slow it down, depending on the direction of the belt
+        If the player falls down, they start Path 1
+        If the player successfully navigates the conveyors, they can proceed to their objective, avoiding the two battles.
+Defense Phase
+    The player enters a central control room with multiple entrances.
+    At the center of the room is a control computer, which is the players objective.
+    The player has time to set up defenses in this area before starting the first wave.
+    The player has to defend 3 rounds in this area, and prevent themselves from being killed, and prevent the control console from being destroyed
+    This is a hard battle, which will test the players skills. The rounds are long and will contain a lot of enemies.
+    In the final wave, a boss enemy enters
+        The boss is very big, has a lot of health, and does massive damage when it hits.
+        The boss will spawn drones and shooters to defend it.
+        The wave will not end until the boss has been destroyed.
+Escape the factory
+    Once the final wave has been completed, the player must escape the factory.
+    The player makes their way back out of the factory, towards an evacuation point outside the main gates.
+    More enemies spawn, and attempt to stop the player. The player can engage the enemies or run past them
+    This section should not be as much of a challenge. This is more of a victory lap for the player.
+    The player exits out the back of the factory
+    The player reaches the evac point and the level ends
+
+
+
+NEW MECHANICS TO BUILD
+Enemies can be alerted
+Conveyor belts
+Doors and switches
+Boss enemy
+Way of triggering dialogue from the commander
+Crushers
+Pushers
+
+
+
+
+
+
+
