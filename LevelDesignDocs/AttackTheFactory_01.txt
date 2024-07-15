@@ -20,9 +20,6 @@ Pushers, which push things off conveyor belts
 
 
 
-CONSTRAINTS
-
-
 
 QUESTIONS
 Is there a way to use the building mechanics in interesting ways?
@@ -98,13 +95,16 @@ Escape the factory
 
 
 NEW MECHANICS TO BUILD
-Enemies can be alerted
-Conveyor belts
+        Enemies can be alerted
+        Enemy spawn volumes
 Doors and switches
+Conveyor belts
 Boss enemy
 Way of triggering dialogue from the commander
 Crushers
 Pushers
+Explosive barrels
+Supply Crates
 
 
 
