@@ -99,7 +99,7 @@ NEW MECHANICS TO BUILD
         Enemy spawn volumes
         Make alerted enemies open front gate
         Doors and switches
-Conveyor belts
+        Conveyor belts
 Boss enemy
 Way of triggering dialogue from the commander
 Crushers
