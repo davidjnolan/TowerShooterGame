@@ -97,6 +97,7 @@ Escape the factory
 NEW MECHANICS TO BUILD
         Enemies can be alerted
         Enemy spawn volumes
+        Make alerted enemies open front gate
 Doors and switches
 Conveyor belts
 Boss enemy
