@@ -98,7 +98,7 @@ NEW MECHANICS TO BUILD
         Enemies can be alerted
         Enemy spawn volumes
         Make alerted enemies open front gate
-Doors and switches
+        Doors and switches
 Conveyor belts
 Boss enemy
 Way of triggering dialogue from the commander
