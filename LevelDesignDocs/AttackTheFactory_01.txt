@@ -102,11 +102,11 @@ NEW MECHANICS TO BUILD
         Conveyor belts
 Boss enemy
 Way of triggering dialogue from the commander
-Crushers
+        Crushers
 Pushers
 Explosive barrels
 Supply Crates
-
+Fall damage
 
 
 
