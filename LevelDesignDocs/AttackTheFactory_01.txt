@@ -100,7 +100,7 @@ NEW MECHANICS TO BUILD
         Make alerted enemies open front gate
         Doors and switches
         Conveyor belts
-Boss enemy
+        Boss enemy
 Way of triggering dialogue from the commander
         Crushers
 Pushers
