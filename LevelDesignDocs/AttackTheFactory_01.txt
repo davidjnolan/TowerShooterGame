@@ -50,6 +50,193 @@ Breach the gates
     There is a supply crate here which the player can optionally collect.
     The player can see a couple of different ways into the building, and is free to chose which path they take.
 Inside the factory
+    The player enters the factory, and finds it full of machinery and moving conveyor belts
+    Initially the player is overwhelmed and confused of where to go
+    The player sees the control center objective
+        Now they know where to go, they just need to figure out how to get there
+
+    Phase 1:
+    The player is introduced to the conveyor belts, in a relatively low risk environment
+        There are no enemies in this section, and the environmental hazards are not too severe - biggest risk is falling off, but will not fall to death
+        Introduce control switches for changing conveyor belts
+        There should be several 'checkpoint' spots that allow the player to pause and consider their next step before continuing
+    The player needs to reach a raised walkway, to proceed to the next section
+
+    Phase 2:
+    The player now has to contend with fighting enemies as well navigating the conveyor belts
+    Perhaps the player is on conveyor belts, while the enemies are on walkways on either side of the conveyors 
+        Players will have to time their movement to avoid the enemies attacks, and also navigate the environmental hazards
+    The player starts on the raised walkway, and has a chance to survey the next section before they attempt it
+        They can see that they will need to drop down onto the conveyor belts, and they will be attacked when they do
+        Although they can see the situation, they cannot preemptively attack the enemies - they are blocked by glass walls
+    The player makes it through this gauntlet, and into an assembley area
+
+    Phase 3:
+    The player enters the storage area
+    This is a large space, containing lots containers.
+        There could be some environmental hazards in here as well
+    The player has time to set up some defenses if they choose to
+    Once the player reaches the center of the room, the containers open and enemies start coming out of them
+        Can control the flow of the combat by choosing which containers to open when
+    A large battle ensuses
+    Once the enemies have been defeated, the player can proceed to the next area
+
+    Phase 4:
+    The player enters another large room, and is greeted with another maze of conveyors
+    The player can see their objective, the control center, is on the other side of this room
+    The player must use the conveyor belts to reach the control center.
+    This time there are more environmental hazards to avoid
+    Again, there are enemies on the sides of the conveyors, attacking the player, but there are also enemies directly on the conveyors, which will attack the player
+        The player may be able to use the environmental hazards against the enemies
+    The final section is a single conveyor belt with 4 crushers, which are all out of sync with each other - making it impossible for the player to get through.
+        To get through this section, the player must find and activate the 3 control switches, which will synchronise the crushers, enabling the player to get through.
+        Enemies continually spawn to attack the player through this section, meaning they have to defend themselves while finding the switches.
+    Once the player makes it through the crushers, they are able to get off the conveyor belts and proceed to the control center.
+
+Defed the Control Center
+    The player enters a central control room with multiple entrances.
+    At the center of the room is a control computer, which is the players objective.
+    The player has time to set up defenses in this area before starting the first wave.
+    The player has to defend 5 rounds in this area, and prevent themselves from being killed, and prevent the control console from being destroyed
+    This is a hard battle, which will test the players skills. The rounds are long and will contain a lot of enemies.
+    In the final wave, a boss enemy enters
+        The boss is very big, has a lot of health, and does massive damage when it hits.
+        The boss will spawn drones and shooters to defend it.
+        The wave will not end until the boss has been destroyed.
+Escape the factory
+    Once the final wave has been completed, the player must escape the factory.
+    The player makes their way back out of the factory, towards an evacuation point outside the main gates.
+    More enemies spawn, and attempt to stop the player. The player can engage the enemies or run past them
+    This section should not be as much of a challenge. This is more of a victory lap for the player.
+    The player exits out the back of the factory
+    The player reaches the evac point and the level ends
+
+
+
+NEW MECHANICS TO BUILD
+        Enemies can be alerted
+        Enemy spawn volumes
+        Make alerted enemies open front gate
+        Doors and switches
+        Conveyor belts
+        Boss enemy
+Way of triggering dialogue from the commander
+        Crushers
+Pushers
+Explosive barrels
+Supply Crates
+Fall damage
+
+
+
+
+
+
+
+
+--------------------------------------------
+
+Stage 2: Entering the factory
+
+GOALS
+Add variety to the combat by adding traversal elements
+Introduce new mechanics such as conveyor belts, and environmental hazards
+Give a sense of jepordy to moving around
+Integrate tactial combat encounters which utilize the dynamic space
+Make a maze-like environment, where the objective is clear, but how exactly to get there requires some thought from the player
+Introduce more verticallity
+Utilize jumping
+
+
+ELEMENTS
+Enemy encounters
+conveyor belts 
+    Crushers, pushers, lazers?
+    Conveyors moving at different speeds
+    Conveyors moving in different directions?
+    Conveyors at different heights, or distances from each other - requiring the player to jump between them
+    Control panels to change speed or direction of conveyors?
+    Robot arms which can knock the player off the belt?
+    Maybe walls which temporarily block the player from attacking the enemies, or protect the player from being attacked
+Catwalks
+New enemies which can attack the player from a distance?
+Ladders to help players get to higher sections?
+Other risks to the player  
+    Falling and having to redo a section
+    Fall damage
+    Falling into molten metal
+
+
+OBJECTIVE
+The player must navigate through the complex structure of the factory, and make it to the control center
+
+
+
+SEQUENCE
+The player enters the factory, and finds it full of machinery and moving conveyor belts
+Initially the player is overwhelmed and confused of where to go
+The player sees the control center objective
+    Now they know where to go, they just need to figure out how to get there
+
+Phase 1:
+The player is introduced to the conveyor belts, in a relatively low risk environment
+    There are no enemies in this section, and the environmental hazards are not too severe - biggest risk is falling off, but will not fall to death
+    Introduce control switches for changing conveyor belts
+    There should be several 'checkpoint' spots that allow the player to pause and consider their next step before continuing
+The player needs to reach a raised walkway, to proceed to the next section
+
+Phase 2:
+The player now has to contend with fighting enemies as well navigating the conveyor belts
+Perhaps the player is on conveyor belts, while the enemies are on walkways on either side of the conveyors 
+    Players will have to time their movement to avoid the enemies attacks, and also navigate the environmental hazards
+The player starts on the raised walkway, and has a chance to survey the next section before they attempt it
+    They can see that they will need to drop down onto the conveyor belts, and they will be attacked when they do
+    Although they can see the situation, they cannot preemptively attack the enemies - they are blocked by glass walls
+The player makes it through this gauntlet, and into an assembley area
+
+Phase 3:
+The player enters the storage area
+This is a large space, containing lots containers.
+    There could be some environmental hazards in here as well
+The player has time to set up some defenses if they choose to
+Once the player reaches the center of the room, the containers open and enemies start coming out of them
+    Can control the flow of the combat by choosing which containers to open when
+A large battle ensuses
+Once the enemies have been defeated, the player can proceed to the next area
+
+Phase 4:
+The player enters another large room, and is greeted with another maze of conveyors
+The player can see their objective, the control center, is on the other side of this room
+The player must use the conveyor belts to reach the control center.
+This time there are more environmental hazards to avoid
+Again, there are enemies on the sides of the conveyors, attacking the player, but there are also enemies directly on the conveyors, which will attack the player
+    The player may be able to use the environmental hazards against the enemies
+The final section is a single conveyor belt with 4 crushers, which are all out of sync with each other - making it impossible for the player to get through.
+    To get through this section, the player must find and activate the 3 control switches, which will synchronise the crushers, enabling the player to get through.
+    Enemies continually spawn to attack the player through this section, meaning they have to defend themselves while finding the switches.
+Once the player makes it through the crushers, they are able to get off the conveyor belts and proceed to the control center.
+
+
+
+
+
+
+
+
+SEQUENCE
+Approach the factory
+    Player starts outside the factory
+    Player can see large defensive walls, and enemies patrolling the inside.
+    Player knows that they will trigger the enemies to attack once they breach the factory gates
+    Player has time to set up some defenses before they go into the factory
+Breach the gates
+    The player somehow gets inside the factory forecourt
+    The enemies are alerted and a battle ensues
+    This battle can introduce exploding barrels. Which the player can use now and later on in the mission.
+    Once the player destroys this wave of enemies, they are free to explore and consider their next options
+    There is a supply crate here which the player can optionally collect.
+    The player can see a couple of different ways into the building, and is free to chose which path they take.
+Inside the factory
     Path 1
         Path 1 is a longer path, which takes the player in at the ground level. 
         Entering the factory at this point alerts enemies inside, which swarm to attack the player. This happens before the player has time to set up defenses.
@@ -91,25 +278,3 @@ Escape the factory
     This section should not be as much of a challenge. This is more of a victory lap for the player.
     The player exits out the back of the factory
     The player reaches the evac point and the level ends
-
-
-
-NEW MECHANICS TO BUILD
-        Enemies can be alerted
-        Enemy spawn volumes
-        Make alerted enemies open front gate
-        Doors and switches
-        Conveyor belts
-        Boss enemy
-Way of triggering dialogue from the commander
-        Crushers
-Pushers
-Explosive barrels
-Supply Crates
-Fall damage
-
-
-
-
-
-
