@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameUserSettings.h"
+#include "GenericEnums.h"
 #include "UserSettings.generated.h"
 
 /**
@@ -16,53 +17,58 @@ class TOWERSHOOTER_API UUserSettings : public UGameUserSettings
 
 public:
 	UFUNCTION(BlueprintCallable)
-	static UUserSettings* GetCustomUserSettings();
+		static UUserSettings* GetCustomUserSettings();
 
 	UFUNCTION(BlueprintPure)
-	bool GetPlayTutorial() const;
+		bool GetPlayTutorial() const;
 
 	UFUNCTION(BlueprintCallable)
-	void SetPlayTutorial(bool NewValue);
+		void SetPlayTutorial(bool NewValue);
 
 	UFUNCTION(BlueprintPure)
-	bool GetShowFPS() const;
+		bool GetShowFPS() const;
 
 	UFUNCTION(BlueprintCallable)
-	void SetShowFPS(bool NewValue);
+		void SetShowFPS(bool NewValue);
 
 	UFUNCTION(BlueprintPure)
-	float GetVolumeMain() const;
+		float GetVolumeMain() const;
 
 	UFUNCTION(BlueprintCallable)
-	void SetVolumeMain(float NewValue);
+		void SetVolumeMain(float NewValue);
 
 	UFUNCTION(BlueprintPure)
-	float GetVolumeMusic() const;
+		float GetVolumeMusic() const;
 
 	UFUNCTION(BlueprintCallable)
-	void SetVolumeMusic(float NewValue);
+		void SetVolumeMusic(float NewValue);
 
 	UFUNCTION(BlueprintPure)
-	float GetVolumeFX() const;
+		float GetVolumeFX() const;
 
 	UFUNCTION(BlueprintCallable)
-	void SetVolumeFX(float NewValue);
+		void SetVolumeFX(float NewValue);
 
 protected:
 	UPROPERTY(Config)
-	bool bPlayTutorial = true;
+		bool bPlayTutorial = true;
 
 	UPROPERTY(Config)
-	bool bShowFPS = false;
+		bool bShowFPS = false;
 
 	UPROPERTY(Config)
-	float VolumeMain = 1.0f; 
+		float VolumeMain = 1.0f; 
 
 	UPROPERTY(Config)
-	float VolumeMusic = 1.0f;
+		float VolumeMusic = 1.0f;
 
 	UPROPERTY(Config)
-	float VolumeFX = 1.0f;
+		float VolumeFX = 1.0f;
+
+	UPROPERTY(BlueprintReadWrite, Config)
+		TEnumAsByte<ELockCamera> LockCamera;
+
+
 
 };
 

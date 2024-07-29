@@ -3,6 +3,7 @@
 
 #include "UserSettings.h"
 
+
 UUserSettings::UUserSettings(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {
     bPlayTutorial = true;
