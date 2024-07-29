@@ -48,6 +48,12 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 		void SetVolumeFX(float NewValue);
+	
+	UFUNCTION(BlueprintPure)
+		float GetBuildCursorSpeed() const;
+
+	UFUNCTION(BlueprintCallable)
+		void SetBuildCursorSpeed(float NewValue);
 
 protected:
 	UPROPERTY(Config)
@@ -68,6 +74,8 @@ protected:
 	UPROPERTY(BlueprintReadWrite, Config)
 		TEnumAsByte<ELockCamera> LockCamera;
 
+	UPROPERTY(Config)
+		float BuildCursorSpeed = 2.5f; 
 
 
 };

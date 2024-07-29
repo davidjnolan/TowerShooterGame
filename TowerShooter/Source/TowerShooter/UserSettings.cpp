@@ -63,3 +63,13 @@ void UUserSettings::SetVolumeFX(float NewValue)
 {
     VolumeFX = NewValue;
 }
+
+float UUserSettings::GetBuildCursorSpeed() const
+{
+    return BuildCursorSpeed;
+}
+
+void UUserSettings::SetBuildCursorSpeed(float NewValue)
+{
+    BuildCursorSpeed = NewValue;
+}
