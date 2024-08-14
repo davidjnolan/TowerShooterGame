@@ -73,3 +73,5 @@ void UUserSettings::SetBuildCursorSpeed(float NewValue)
 {
     BuildCursorSpeed = NewValue;
 }
+
+
