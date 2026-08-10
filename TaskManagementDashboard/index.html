@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tower Shooter Task Board v4.3</title>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.7/Sortable.min.js"></script>
+<style>
+:root{--bg:#0f141a;--panel:#18202a;--panel2:#222c38;--panel3:#2b3745;--text:#eef4fa;--muted:#9eacba;--border:#344353;--accent:#67aefb;--p0:#ff3b5f;--p1:#ff7b54;--p2:#ffc857;--p3:#67c6e3;--p4:#8b93a7}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text)}button,input,select,textarea{font:inherit}
+header{position:sticky;top:0;z-index:20;background:rgba(15,20,26,.97);border-bottom:1px solid var(--border);padding:16px 22px}.header-row{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}.toolbar{display:flex;gap:7px;flex-wrap:wrap;align-items:center}.file-status{display:inline-flex;align-items:center;padding:7px 10px;border:1px solid var(--border);border-radius:999px;font-size:12px;background:var(--panel)}.file-status.connected{color:#baf3ce;border-color:#39694b;background:#16271c}.file-status.permission{color:#ffe3a3;border-color:#6b5a2d;background:#2a2418}.file-status.cached{color:#c9dcff;border-color:#405a78;background:#172333}.file-status.disconnected{color:var(--muted)}h1{margin:0;font-size:26px}.subtitle{font-size:12px;color:var(--muted);margin-top:4px}
+button{background:var(--panel2);color:var(--text);border:1px solid var(--border);border-radius:7px;padding:8px 10px;cursor:pointer}button:hover{border-color:var(--accent)}button.primary{background:#194c7d}.danger{color:#ffb7b7}
+main{padding:16px 22px 40px}.controls{display:grid;grid-template-columns:minmax(220px,2fr) repeat(3,minmax(130px,1fr));gap:9px}input,select,textarea{background:#10161d;color:var(--text);border:1px solid var(--border);border-radius:7px;padding:8px}.summary{display:flex;gap:8px;flex-wrap:wrap;margin:11px 0}.pill{background:var(--panel);border:1px solid var(--border);border-radius:999px;padding:6px 9px;font-size:12px}.notice{background:#162230;border:1px solid #28465f;color:#cbe6ff;padding:10px;border-radius:8px;font-size:12px;margin:10px 0}
+.board{display:grid;grid-template-columns:repeat(4,minmax(290px,1fr));gap:13px;overflow-x:auto;align-items:stretch}.column{background:var(--panel);border:1px solid var(--border);border-radius:10px;min-height:500px;display:flex;flex-direction:column}.column-head{padding:11px 12px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between}.dropzone{padding:9px;min-height:440px;flex:1}
+.card{background:var(--panel2);border:1px solid var(--border);border-left:5px solid var(--p2);border-radius:8px;padding:9px;margin-bottom:8px;cursor:pointer}.card[data-priority=P0]{border-left-color:var(--p0)}.card[data-priority=P1]{border-left-color:var(--p1)}.card[data-priority=P2]{border-left-color:var(--p2)}.card[data-priority=P3]{border-left-color:var(--p3)}.card[data-priority=P4]{border-left-color:var(--p4)}.card.filtered,.card.lane-later-hidden{display:none}.card.sortable-ghost{opacity:.25}.card.sortable-chosen{outline:2px solid var(--accent)}.card-top{display:flex;justify-content:space-between;gap:8px}.drag-handle{cursor:grab;color:var(--muted);font-size:18px;padding-right:5px}.task-id{font-weight:700;color:var(--accent)}.title{font-weight:700;margin:6px 0 3px}.meta,.desc,.waiting,.deps{font-size:12px;line-height:1.4;color:var(--muted)}.waiting{color:#ffd98a;margin-top:5px}.ready-divider{margin:9px 0;padding:7px;border:1px dashed var(--border);border-radius:7px;color:var(--muted);font-size:12px;text-align:center}
+.footer-panels{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:18px}.panel{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:13px}table{width:100%;border-collapse:collapse;font-size:12px}th,td{padding:7px;border-bottom:1px solid var(--border);text-align:left}
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center;z-index:50;padding:18px}.modal-backdrop.open{display:flex}.modal{width:min(880px,100%);max-height:92vh;overflow:auto;background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:17px}.modal h2{margin:0 0 4px}.modal-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.field{display:flex;flex-direction:column;gap:4px}.field.full{grid-column:1/-1}label{font-size:12px;color:var(--muted)}textarea{min-height:78px;resize:vertical}.modal-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:14px}.detail-section{margin-top:14px}.detail-section h3{margin:0 0 6px;font-size:14px}.detail-list{margin:0;padding-left:20px;font-size:13px;color:#d8e2ec}.detail-list li{margin:4px 0}.history-item{border-left:2px solid var(--border);padding:3px 0 3px 9px;margin:5px 0;font-size:12px;color:var(--muted)}.patch-area{height:180px;width:100%}.status{font-size:12px;color:var(--muted);margin-top:6px}
+@media(max-width:1000px){.controls{grid-template-columns:1fr 1fr}.board{grid-template-columns:repeat(4,290px)}.footer-panels{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="header-row"><div><h1>Tower Shooter Task Board v4.3</h1><div class="subtitle">Localhost-backed board + canonical JSON + patch workflow</div></div><div class="toolbar">
+<span id="projectFileStatus" class="file-status connected">Project Data: ● TowerShooter_Tasks.json</span>
+<button class="primary" onclick="loadProjectData()">Reload Project Data</button>
+<button onclick="saveProjectData()">Save Project Data</button>
+<button onclick="exportProjectData()">Show JSON Snapshot</button>
+<button onclick="openPatchModal()">Apply Patch</button>
+</div></div></header>
+<main>
+<div class="notice"><b>Canonical data lives in TowerShooter_Tasks.json.</b> The board loads it automatically from the same folder through the local server and saves directly back to it.</div>
+<div class="controls"><input id="search" placeholder="Search tasks…" oninput="applyFilters()"><select id="priorityFilter" onchange="applyFilters()"><option value="">All priorities</option><option>P0</option><option>P1</option><option>P2</option><option>P3</option><option>P4</option></select><select id="categoryFilter" onchange="applyFilters()"><option value="">All categories</option></select><select id="typeFilter" onchange="applyFilters()"><option value="">All types</option></select></div>
+<div class="summary" id="summary"></div><div class="summary"><span class="pill"><b>Tasks shown per lane</b></span><label class="pill">Show first <select id="focusCount" onchange="applyAllLaneFocus()" style="margin-left:6px;padding:3px 6px"><option>5</option><option selected>8</option><option>10</option><option value="999">All</option></select></label><button onclick="toggleLater()">Show / hide later tasks</button></div>
+<div class="board" id="board"></div>
+<div class="footer-panels"><section class="panel"><h2>Category Overview</h2><div id="categoryOverview"></div></section><section class="panel"><h2>Dependencies</h2><div id="dependencyMap"></div></section></div>
+
+<section class="panel" id="snapshotPanel" style="margin-top:14px">
+  <div style="display:flex;justify-content:space-between;gap:10px;align-items:center">
+    <div>
+      <h2 style="margin:0">JSON Snapshot</h2>
+      <div class="status">Click “Show JSON Snapshot” to generate the current canonical project JSON for copying into ChatGPT.</div>
+    </div>
+    <button onclick="copySnapshot()">Copy JSON</button>
+  </div>
+  <textarea id="snapshotOutput" class="patch-area" readonly style="margin-top:10px;height:260px" placeholder="Snapshot JSON will appear here."></textarea>
+</section>
+
+</main>
+<div class="modal-backdrop" id="taskModal"><div class="modal"><div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start"><div><h2 id="detailTitle"></h2><div id="detailMeta" class="meta"></div></div><button onclick="closeModal('taskModal')">Close</button></div><div id="taskDetails"></div><div class="modal-actions"><button onclick="editCurrentTask()">Edit</button></div></div></div>
+<div class="modal-backdrop" id="editModal"><div class="modal"><h2>Edit Task</h2><div class="modal-grid"><div class="field"><label>ID</label><input id="eId" disabled></div><div class="field"><label>Title</label><input id="eTitle"></div><div class="field"><label>Priority</label><select id="ePriority"><option>P0</option><option>P1</option><option>P2</option><option>P3</option><option>P4</option></select></div><div class="field"><label>Status</label><select id="eStatus"><option>Backlog</option><option>Ready</option><option>In Progress</option><option>Done</option></select></div><div class="field"><label>Type</label><input id="eType"></div><div class="field"><label>Category</label><input id="eCategory"></div><div class="field full"><label>Description</label><textarea id="eDescription"></textarea></div><div class="field full"><label>Why it matters</label><textarea id="eWhy"></textarea></div><div class="field full"><label>Dependencies (comma separated)</label><input id="eDependencies"></div><div class="field full"><label>Promotion criteria / waiting for</label><textarea id="ePromotion"></textarea></div><div class="field"><label>Estimated effort</label><input id="eEffort"></div><div class="field"><label>Date added</label><input id="eDateAdded"></div><div class="field full"><label>Acceptance criteria (one per line)</label><textarea id="eAcceptance"></textarea></div><div class="field full"><label>Context (one per line)</label><textarea id="eContext"></textarea></div><div class="field full"><label>Decisions (one per line)</label><textarea id="eDecisions"></textarea></div><div class="field full"><label>Notes (one per line)</label><textarea id="eNotes"></textarea></div></div><div class="modal-actions"><button onclick="closeModal('editModal')">Cancel</button><button class="primary" onclick="saveTaskEdit()">Save</button></div></div></div>
+<div class="modal-backdrop" id="patchModal"><div class="modal"><h2>Apply Task Patch</h2><div class="status">Paste a patch from ChatGPT or load a patch JSON file. Supported actions: add, update, move, delete.</div><textarea id="patchText" class="patch-area" placeholder='{"task_patch_version":1,"operations":[...]}'></textarea><div class="modal-actions"><input id="patchFile" type="file" accept=".json,application/json" hidden onchange="loadPatchFile(event)"><button onclick="document.getElementById('patchFile').click()">Load Patch File</button><button onclick="closeModal('patchModal')">Cancel</button><button class="primary" onclick="applyPatch()">Apply Patch</button></div><div id="patchResult" class="status"></div></div></div>
+<script>
+const statuses=["Backlog","Ready","In Progress","Done"];let project={schema_version:3,project:"Tower Shooter",tasks:[]};let sortables=[];let allLaterExpanded=false;let currentTaskId=null;
+
+function taskIcon(type){
+  const icons={
+    "Bug":"\uD83D\uDC1B",
+    "Feature":"\u2B50",
+    "Refactor":"\uD83C\uDFD7\uFE0F",
+    "Tech Debt":"\uD83E\uDDF1",
+    "Balance":"\u2696\uFE0F",
+    "Investigation":"\uD83E\uDDEA",
+    "Decision":"\u2753",
+    "Art":"\uD83C\uDFA8"
+  };
+  return icons[type]||"\u2022";
+}
+
+function esc(s){return String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}function arr(v){return Array.isArray(v)?v.filter(Boolean):(v?[String(v)]:[])}function normalise(){statuses.forEach(status=>{project.tasks.filter(t=>t.status===status).sort((a,b)=>(a.order??9999)-(b.order??9999)).forEach((t,i)=>t.order=i)})}function markUpdated(){project.last_updated=new Date().toISOString().slice(0,10)}
+
+async function loadProjectData(){
+  try{
+    const res=await fetch("./TowerShooter_Tasks.json",{cache:"no-store"});
+    if(!res.ok)throw new Error(`HTTP ${res.status}`);
+    const parsed=await res.json();
+    if(!parsed||!Array.isArray(parsed.tasks))throw new Error("Project JSON does not contain a tasks array.");
+    project=parsed;
+    normalise();
+    render();
+    setProjectFileStatus("connected");
+  }catch(e){
+    setProjectFileStatus("disconnected");
+    alert("Could not load TowerShooter_Tasks.json: "+e.message);
+  }
+}
+
+async function saveProjectData(){
+  try{
+    normalise();
+    markUpdated();
+    const res=await fetch("/api/tasks",{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify(project)
+    });
+    if(!res.ok){
+      const msg=await res.text();
+      throw new Error(msg||`HTTP ${res.status}`);
+    }
+    setProjectFileStatus("connected");
+  }catch(e){
+    setProjectFileStatus("disconnected");
+    alert("Could not save TowerShooter_Tasks.json: "+e.message);
+  }
+}
+
+function setProjectFileStatus(mode){
+  const el=document.getElementById("projectFileStatus");
+  if(mode==="connected"){
+    el.className="file-status connected";
+    el.textContent="Project Data: ● TowerShooter_Tasks.json";
+  }else{
+    el.className="file-status disconnected";
+    el.textContent="Project Data: Disconnected";
+  }
+}
+
+function exportProjectData(){
+  normalise();
+  markUpdated();
+  const text=JSON.stringify(project,null,2);
+  const out=document.getElementById("snapshotOutput");
+  out.value=text;
+  document.getElementById("snapshotPanel").scrollIntoView({behavior:"smooth",block:"start"});
+}
+async function copySnapshot(){
+  const out=document.getElementById("snapshotOutput");
+  if(!out.value)exportProjectData();
+  try{
+    await navigator.clipboard.writeText(document.getElementById("snapshotOutput").value);
+  }catch(e){
+    const field=document.getElementById("snapshotOutput");
+    field.focus();
+    field.select();
+    document.execCommand("copy");
+  }
+}
+function downloadText(name,text,type){const b=new Blob([text],{type}),u=URL.createObjectURL(b),a=document.createElement("a");a.href=u;a.download=name;a.click();URL.revokeObjectURL(u)}
+function render(){sortables.forEach(s=>s.destroy());sortables=[];normalise();populateFilters();const board=document.getElementById("board");board.innerHTML="";statuses.forEach(status=>{const subset=project.tasks.filter(t=>t.status===status).sort((a,b)=>a.order-b.order);const col=document.createElement("section");col.className="column";col.innerHTML=`<div class="column-head"><b>${status}</b><span>${subset.length}</span></div><div class="dropzone" data-status="${status}"></div>`;board.appendChild(col);const zone=col.querySelector(".dropzone");subset.forEach(t=>zone.appendChild(makeCard(t)));if(window.Sortable){sortables.push(new Sortable(zone,{group:"tasks",animation:180,handle:".drag-handle",ghostClass:"sortable-ghost",chosenClass:"sortable-chosen",fallbackOnBody:true,emptyInsertThreshold:80,onEnd:syncFromDOM}))}});renderSummary();renderCategory();renderDependencies();applyFilters();applyAllLaneFocus()}
+function makeCard(t){const c=document.createElement("article");c.className="card";c.dataset.id=t.id;c.dataset.priority=t.priority;c.dataset.search=`${t.id} ${t.title} ${t.type} ${t.category} ${t.description||""} ${t.why_it_matters||""}`.toLowerCase();c.innerHTML=`<div class="card-top"><div><span class="drag-handle" onclick="event.stopPropagation()">⋮⋮</span><span class="task-id">${esc(t.id)}</span></div><span>${esc(t.priority)}</span></div><div class="title">${taskIcon(t.type)} ${esc(t.title)}</div><div class="meta">${esc(t.type)} · ${esc(t.category)}</div><div class="desc">${esc(t.description||"")}</div>${t.promotion_criteria?`<div class="waiting">Waiting for: ${esc(t.promotion_criteria)}</div>`:""}`;c.onclick=()=>openTask(t.id);return c}
+function syncFromDOM(){document.querySelectorAll(".dropzone").forEach(zone=>[...zone.querySelectorAll(".card")].forEach((card,index)=>{const t=project.tasks.find(x=>x.id===card.dataset.id);if(t){t.status=zone.dataset.status;t.order=index}}));normalise();markUpdated();cacheProjectData();render()}
+function populateFilters(){refill("categoryFilter",[...new Set(project.tasks.map(t=>t.category))].sort(),"All categories");refill("typeFilter",[...new Set(project.tasks.map(t=>t.type))].sort(),"All types")}function refill(id,vals,label){const e=document.getElementById(id),cur=e.value;e.innerHTML=`<option value="">${label}</option>`+vals.map(v=>`<option>${esc(v)}</option>`).join("");if(vals.includes(cur))e.value=cur}
+function applyFilters(){const q=document.getElementById("search").value.trim().toLowerCase(),p=document.getElementById("priorityFilter").value,c=document.getElementById("categoryFilter").value,ty=document.getElementById("typeFilter").value;document.querySelectorAll(".card").forEach(card=>{const t=project.tasks.find(x=>x.id===card.dataset.id);card.classList.toggle("filtered",!((!q||card.dataset.search.includes(q))&&(!p||t.priority===p)&&(!c||t.category===c)&&(!ty||t.type===ty)))});applyAllLaneFocus()}
+function applyAllLaneFocus(){["Backlog","Ready","Done"].forEach(status=>{const z=[...document.querySelectorAll(".dropzone")].find(x=>x.dataset.status===status);if(!z)return;z.querySelectorAll(".ready-divider").forEach(x=>x.remove());const cards=[...z.querySelectorAll(".card")],limit=parseInt(document.getElementById("focusCount").value);cards.forEach((card,i)=>card.classList.toggle("lane-later-hidden",!allLaterExpanded&&i>=limit));const hidden=Math.max(0,cards.length-limit);if(hidden>0&&!allLaterExpanded&&cards[limit-1]){const d=document.createElement("div");d.className="ready-divider";d.textContent=`${hidden} later task${hidden===1?"":"s"} hidden`;cards[limit-1].after(d)}})}function toggleLater(){allLaterExpanded=!allLaterExpanded;applyAllLaneFocus()}
+function renderSummary(){const open=project.tasks.filter(t=>t.status!=="Done");document.getElementById("summary").innerHTML=`<span class="pill">Tasks: ${project.tasks.length}</span><span class="pill">Open: ${open.length}</span><span class="pill">Ready: ${project.tasks.filter(t=>t.status==="Ready").length}</span><span class="pill">In Progress: ${project.tasks.filter(t=>t.status==="In Progress").length}</span>`}
+function renderCategory(){const cats=[...new Set(project.tasks.map(t=>t.category))].sort();let h="<table><tr><th>Category</th><th>Backlog</th><th>Ready</th><th>In Progress</th><th>Done</th></tr>";cats.forEach(cat=>h+=`<tr><td>${esc(cat)}</td>${statuses.map(s=>`<td>${project.tasks.filter(t=>t.category===cat&&t.status===s).length}</td>`).join("")}</tr>`);document.getElementById("categoryOverview").innerHTML=h+"</table>"}function renderDependencies(){const rows=project.tasks.filter(t=>arr(t.dependencies).length);document.getElementById("dependencyMap").innerHTML=rows.map(t=>`<div class="history-item"><b>${esc(arr(t.dependencies).join(" + "))}</b> → <b>${esc(t.id)}</b> ${esc(t.title)}</div>`).join("")||'<div class="status">No dependencies recorded.</div>'}
+function section(title,items){items=arr(items);return items.length?`<div class="detail-section"><h3>${title}</h3><ul class="detail-list">${items.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`:""}
+function openTask(id){currentTaskId=id;const t=project.tasks.find(x=>x.id===id);if(!t)return;document.getElementById("detailTitle").textContent=`${t.id} — ${t.title}`;document.getElementById("detailMeta").textContent=`${t.priority} · ${t.status} · ${t.type} · ${t.category}`;let h=`<div class="detail-section"><h3>Description</h3><div class="desc">${esc(t.description||"")}</div></div>`;if(t.why_it_matters)h+=`<div class="detail-section"><h3>Why it matters</h3><div class="desc">${esc(t.why_it_matters)}</div></div>`;h+=section("Acceptance criteria",t.acceptance_criteria)+section("Relevant context",t.context)+section("Decisions",t.decisions)+section("Notes",t.notes);if(arr(t.dependencies).length)h+=section("Dependencies",t.dependencies);if(t.promotion_criteria)h+=`<div class="detail-section"><h3>Promotion criteria / waiting for</h3><div class="desc">${esc(t.promotion_criteria)}</div></div>`;h+=`<div class="detail-section"><h3>Planning</h3><div class="desc">Estimated effort: ${esc(t.estimated_effort||"Unknown")}<br>Date added: ${esc(t.date_added||"Unknown")}</div></div>`;if(arr(t.history).length)h+=`<div class="detail-section"><h3>History</h3>${t.history.map(e=>`<div class="history-item"><b>${esc(e.date||"")}</b> — ${esc(e.event||"")}${e.note?`<br>${esc(e.note)}`:""}</div>`).join("")}</div>`;document.getElementById("taskDetails").innerHTML=h;document.getElementById("taskModal").classList.add("open")}
+function editCurrentTask(){const t=project.tasks.find(x=>x.id===currentTaskId);if(!t)return;closeModal("taskModal");eId.value=t.id;eTitle.value=t.title;ePriority.value=t.priority;eStatus.value=t.status;eType.value=t.type;eCategory.value=t.category;eDescription.value=t.description||"";eWhy.value=t.why_it_matters||"";eDependencies.value=arr(t.dependencies).join(", ");ePromotion.value=t.promotion_criteria||"";eEffort.value=t.estimated_effort||"";eDateAdded.value=t.date_added||"";eAcceptance.value=arr(t.acceptance_criteria).join("\n");eContext.value=arr(t.context).join("\n");eDecisions.value=arr(t.decisions).join("\n");eNotes.value=arr(t.notes).join("\n");document.getElementById("editModal").classList.add("open")}
+function splitLines(v){return v.split("\n").map(x=>x.trim()).filter(Boolean)}function saveTaskEdit(){const t=project.tasks.find(x=>x.id===currentTaskId);if(!t)return;const oldStatus=t.status;Object.assign(t,{title:eTitle.value.trim(),priority:ePriority.value,status:eStatus.value,type:eType.value.trim(),category:eCategory.value.trim(),description:eDescription.value.trim(),why_it_matters:eWhy.value.trim(),dependencies:eDependencies.value.split(",").map(x=>x.trim()).filter(Boolean),promotion_criteria:ePromotion.value.trim(),estimated_effort:eEffort.value.trim()||"Unknown",date_added:eDateAdded.value.trim()||"Unknown",acceptance_criteria:splitLines(eAcceptance.value),context:splitLines(eContext.value),decisions:splitLines(eDecisions.value),notes:splitLines(eNotes.value)});if(oldStatus!==t.status)t.order=project.tasks.filter(x=>x.status===t.status&&x.id!==t.id).length;t.history=t.history||[];t.history.push({date:new Date().toISOString().slice(0,10),event:"Edited in task board",note:"Task details updated manually."});markUpdated();closeModal("editModal");render()}function closeModal(id){document.getElementById(id).classList.remove("open")}
+function openPatchModal(){patchText.value="";patchResult.textContent="";document.getElementById("patchModal").classList.add("open")}function loadPatchFile(event){const f=event.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>patchText.value=r.result;r.readAsText(f);event.target.value=""}
+function applyPatch(){try{const patch=JSON.parse(patchText.value),ops=patch.operations;if(!Array.isArray(ops))throw new Error("Patch has no operations array.");let applied=0;for(const op of ops){if(op.action==="add"){if(!op.task?.id)throw new Error("Add operation missing task.id");if(project.tasks.some(t=>t.id===op.task.id))throw new Error(`Task ${op.task.id} already exists`);const t=op.task;t.order=t.order??project.tasks.filter(x=>x.status===t.status).length;t.history=t.history||[];t.history.push({date:new Date().toISOString().slice(0,10),event:"Added by patch",note:op.history_note||""});project.tasks.push(t);applied++}else if(op.action==="update"){const t=project.tasks.find(x=>x.id===op.id);if(!t)throw new Error(`Task ${op.id} not found`);Object.assign(t,op.changes||{});t.history=t.history||[];t.history.push({date:new Date().toISOString().slice(0,10),event:"Updated by patch",note:op.history_note||""});applied++}else if(op.action==="move"){const t=project.tasks.find(x=>x.id===op.id);if(!t)throw new Error(`Task ${op.id} not found`);if(op.status)t.status=op.status;if(Number.isFinite(op.order))t.order=op.order;t.history=t.history||[];t.history.push({date:new Date().toISOString().slice(0,10),event:"Moved by patch",note:op.history_note||""});applied++}else if(op.action==="delete"){const i=project.tasks.findIndex(x=>x.id===op.id);if(i<0)throw new Error(`Task ${op.id} not found`);project.tasks.splice(i,1);applied++}else throw new Error(`Unsupported action: ${op.action}`)}normalise();markUpdated();cacheProjectData();render();patchResult.textContent=`Applied ${applied} operation${applied===1?"":"s"} successfully. Save Project Data to persist them to disk.`}catch(e){patchResult.textContent="Patch failed: "+e.message}}
+document.querySelectorAll(".modal-backdrop").forEach(m=>m.addEventListener("click",e=>{if(e.target===m)m.classList.remove("open")}));document.addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelectorAll(".modal-backdrop.open").forEach(x=>x.classList.remove("open"))});
+window.addEventListener("DOMContentLoaded",loadProjectData);
+</script>
+</body></html>
