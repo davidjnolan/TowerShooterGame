@@ -77,5 +77,8 @@ DerivedDataCache/*
 # Starter Content etc
 Content/ThirdPartyContent*
 
-#Original Music Files
+# Original Music Files
 Content/Audio/Music/WAVs/*
+
+# Build Counter
+BuildLocal/*
