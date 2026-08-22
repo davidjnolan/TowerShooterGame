@@ -4,6 +4,11 @@ param(
 )
 
 $ProjectRoot = Split-Path -Parent $PSScriptRoot
+$UnrealProjectRoot = Join-Path $ProjectRoot "TowerShooter"
+$UnrealEngineRoot = "C:\Program Files\Epic Games\UE_5.7"
+
+$RunUAT = Join-Path $UnrealEngineRoot "Engine\Build\BatchFiles\RunUAT.bat"
+$UProject = Join-Path $UnrealProjectRoot "TowerShooter.uproject"
 
 Set-Location $ProjectRoot
 
@@ -25,8 +30,6 @@ $SourceRevision = "$CommitCount-$ShortHash"
 # -------------------------------------------------------------------------
 
 # Set Variables for file path
-$UnrealProjectRoot = Join-Path $ProjectRoot "TowerShooter"
-
 $BuildStateDirectory = Join-Path $UnrealProjectRoot "BuildLocal"
 $BuildCounterFile = Join-Path $BuildStateDirectory "BuildCounter.json"
 
@@ -67,6 +70,9 @@ $CounterData |
 # $Assemble $BuildID
 $BuildID = "{0}-{1:D3}" -f $Today, $BuildNumber
 
+# Assemble archive output path now that SourceRevision and BuildID exist
+$ArchiveDirectory = "D:\GameBuilds\TowerShooter_${SourceRevision}_${BuildID}"
+
 # Assemble $BuildMetadata
 $BuildMetadata = @{
     SchemaVersion      = 1
@@ -89,6 +95,78 @@ $BuildMetadata |
     Set-Content $BuildMetadataFile
 
 
+Write-Host ""
+Write-Host "Starting Unreal packaging..."
+Write-Host ""
+
+& $RunUAT `
+    BuildCookRun `
+    -nop4 `
+    -utf8output `
+    -nocompileeditor `
+    -skipbuildeditor `
+    -cook `
+    "-project=$UProject" `
+    -target=TowerShooter `
+    "-unrealexe=$UnrealEngineRoot\Engine\Binaries\Win64\UnrealEditor-Cmd.exe" `
+    "-platform=$Platform" `
+    -installed `
+    -SkipCookingErrorSummary `
+    -stage `
+    -archive `
+    -package `
+    -build `
+    -pak `
+    -iostore `
+    -compressed `
+    -prereqs `
+    "-archivedirectory=$ArchiveDirectory" `
+    "-clientconfig=$Configuration" `
+    -nocompile `
+    -nocompileuat
+
+if ($LASTEXITCODE -ne 0)
+{
+    Write-Host ""
+    Write-Error "Unreal packaging failed with exit code $LASTEXITCODE"
+    exit $LASTEXITCODE
+}
+
+# -------------------------------------------------------------------------
+# Copy build metadata beside the packaged executable.
+# This makes the build self-identifying both externally and at runtime.
+# -------------------------------------------------------------------------
+
+$PackagedExe = Get-ChildItem `
+    -Path $ArchiveDirectory `
+    -Filter "TowerShooter.exe" `
+    -Recurse `
+    -File |
+    Select-Object -First 1
+
+if ($null -eq $PackagedExe)
+{
+    Write-Error "Packaging succeeded, but TowerShooter.exe could not be found in the archive."
+    exit 1
+}
+
+$PackagedRoot = $PackagedExe.Directory.FullName
+$PackagedMetadataFile = Join-Path $PackagedRoot "BuildMetadata.json"
+
+Copy-Item `
+    -Path $BuildMetadataFile `
+    -Destination $PackagedMetadataFile `
+    -Force
+
+
+
+Write-Host ""
+Write-Host "Packaging completed successfully."
+Write-Host "Build:           $ArchiveDirectory"
+Write-Host "Executable:      $($PackagedExe.FullName)"
+Write-Host "Build Metadata:  $PackagedMetadataFile"
+Write-Host ""
+
 
 # Print
 Write-Host ""
@@ -98,3 +176,6 @@ Write-Host "Branch:          $Branch"
 Write-Host "Dirty:           $IsDirty"
 Write-Host "Build ID:        $BuildID"
 
+Write-Host "UAT:             $RunUAT"
+Write-Host "Project:         $UProject"
+Write-Host "Archive:         $ArchiveDirectory"

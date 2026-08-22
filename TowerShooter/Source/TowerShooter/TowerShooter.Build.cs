@@ -13,7 +13,8 @@ public class TowerShooter : ModuleRules
 			"CoreUObject",
 			"Engine",
 			"InputCore",
-			"GameplayTags"
+			"GameplayTags",
+			"Json"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] { 
