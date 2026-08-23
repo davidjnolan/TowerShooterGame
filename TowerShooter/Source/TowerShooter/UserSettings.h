@@ -57,7 +57,7 @@ public:
 
 protected:
 	UPROPERTY(Config)
-		bool bPlayTutorial = true;
+		bool bPlayTutorial = false;
 
 	UPROPERTY(Config)
 		bool bShowFPS = false;
