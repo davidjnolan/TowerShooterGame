@@ -14,7 +14,8 @@ public class TowerShooter : ModuleRules
 			"Engine",
 			"InputCore",
 			"GameplayTags",
-			"Json"
+			"Json",
+			"NavigationSystem"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] { 
