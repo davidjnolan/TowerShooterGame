@@ -376,3 +376,48 @@ void UUtilityBlueprintFunctionLibrary::NoOp()
 {
     // Intentionally does nothing.
 }
+
+
+TArray<FString> UUtilityBlueprintFunctionLibrary::GetFilesInDirectory(
+    const FString& Directory,
+    const FString& Extension)
+{
+    TArray<FString> FoundFiles;
+
+    // Make sure the supplied directory is in a consistent format before
+    // constructing the search pattern.
+    FString NormalizedDirectory = Directory;
+    FPaths::NormalizeDirectoryName(NormalizedDirectory);
+
+    // Build the wildcard used by IFileManager.
+    //
+    // For example:
+    //   Directory = "D:/Projects/TowerShooter/Snapshots"
+    //   Extension = "json"
+    //
+    // produces:
+    //   "D:/Projects/TowerShooter/Snapshots/*.json"
+    //
+    // If Extension is empty, search for all files instead.
+    const FString SearchPattern = Extension.IsEmpty()
+        ? FPaths::Combine(NormalizedDirectory, TEXT("*"))
+        : FPaths::Combine(
+            NormalizedDirectory,
+            FString::Printf(TEXT("*.%s"), *Extension)
+        );
+
+    // FindFiles returns the names of matching files rather than their
+    // complete paths.
+    //
+    // The first boolean means "include files".
+    // The second boolean means "include directories".
+    IFileManager::Get().FindFiles(
+        FoundFiles,
+        *SearchPattern,
+        true,
+        false
+    );
+
+    return FoundFiles;
+}
+

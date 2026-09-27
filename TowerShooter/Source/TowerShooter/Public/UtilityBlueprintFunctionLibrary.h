@@ -245,4 +245,23 @@ public:
 	 */
 	UFUNCTION(BlueprintCallable, Category="Utilities")
 	static void NoOp();
+
+	/**
+	 * Returns the filenames of files in a directory that match the supplied extension.
+	 *
+	 * @param Directory     Absolute directory to search.
+	 * @param Extension     File extension to search for, without the leading dot
+	 *                      (for example "json"). Leave empty to return all files.
+	 *
+	 * @return              An array containing filenames only, not full paths.
+	 *                      Returns an empty array if the directory does not exist
+	 *                      or no matching files are found.
+	 */
+	UFUNCTION(BlueprintPure, Category = "File Utilities")
+	static TArray<FString> GetFilesInDirectory(
+		const FString& Directory,
+		const FString& Extension
+	);
+
+
 };
