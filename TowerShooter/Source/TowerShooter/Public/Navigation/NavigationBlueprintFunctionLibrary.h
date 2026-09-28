@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "Navigation/CrowdFollowingComponent.h"
 #include "NavigationBlueprintFunctionLibrary.generated.h"
 
 class AAIController;
@@ -46,6 +47,15 @@ struct FDirectNavCostSegment
     /** Cost contributed by this segment to the complete direct route. */
     UPROPERTY(BlueprintReadOnly, Category = "Navigation")
     double SegmentCost = 0.0;
+};
+
+UENUM(BlueprintType)
+enum class ECrowdAvoidanceQualityBP : uint8
+{
+    Low     UMETA(DisplayName = "Low"),
+    Medium  UMETA(DisplayName = "Medium"),
+    Good    UMETA(DisplayName = "Good"),
+    High    UMETA(DisplayName = "High")
 };
 
 /**
@@ -145,4 +155,62 @@ public:
     static bool SetCrowdSimulationEnabled(
         AAIController* AIController,
         bool bEnabled);
+    
+    UFUNCTION(BlueprintCallable, Category = "AI|Navigation|Crowd|Debug")
+    static FString GetCrowdFollowingDebugInfo(AAIController* AIController);
+
+
+    UFUNCTION(BlueprintCallable, Category = "AI|Navigation|Crowd|Debug")
+    static bool GetCrowdMovementDebugInfo(
+        AAIController* AIController,
+        FVector& CrowdAgentVelocity,
+        FVector& CrowdMoveDirection);
+
+
+    UFUNCTION(BlueprintCallable, Category = "AI|Navigation|Crowd")
+    static bool SetCrowdAvoidanceQuality(
+        AAIController* AIController,
+        ECrowdAvoidanceQualityBP Quality);
+    
+    
+    UFUNCTION(BlueprintCallable, Category = "AI|Navigation|Crowd")
+    static bool SetCrowdSeparation(
+        AAIController* AIController,
+        bool bEnable);
+    
+    
+    UFUNCTION(BlueprintCallable, Category = "AI|Navigation|Crowd")
+    static bool SetCrowdSeparationWeight(
+        AAIController* AIController,
+        float Weight);
+
+    /**
+     * Enables or disables Detour Crowd turn anticipation for this AI Controller.
+     */
+    UFUNCTION(BlueprintCallable, Category = "AI|Navigation|Crowd")
+    static bool SetCrowdAnticipateTurns(
+        AAIController* AIController,
+        bool bEnable);
+
+
+    /**
+     * Enables or disables Detour Crowd path offsetting for this AI Controller.
+     */
+    UFUNCTION(BlueprintCallable, Category = "AI|Navigation|Crowd")
+    static bool SetCrowdPathOffset(
+        AAIController* AIController,
+        bool bEnable);
+
+    UFUNCTION(BlueprintCallable, Category = "AI|Navigation|Crowd")
+    static bool SetCrowdCollisionQueryRange(
+        AAIController* AIController,
+        float Range);
+
+    
+    UFUNCTION(BlueprintCallable, Category = "AI|Navigation|Crowd")
+    static bool SetCrowdAvoidanceRangeMultiplier(
+        AAIController* AIController,
+        float Multiplier);
+
+
 };

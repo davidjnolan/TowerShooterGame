@@ -1,0 +1,365 @@
+{
+	"schemaVersion": 1,
+	"name": "Test3",
+	"sourceMap": "Map_TestArena3_Corridor",
+	"classes":
+	{
+		"BP_PStruct_MainTower_C": "/Game/Blueprints/Actors/PlayerStructures/BP_PStruct_MainTower.BP_PStruct_MainTower_C",
+		"BP_PStruct_Wall01_C": "/Game/Blueprints/Actors/PlayerStructures/Defenses/BP_PStruct_Wall01.BP_PStruct_Wall01_C",
+		"BP_PStruct_Turret01_C": "/Game/Blueprints/Actors/PlayerStructures/Defenses/BP_PStruct_Turret01.BP_PStruct_Turret01_C",
+		"BP_Pstruct_Trap_GlueTrap01_C": "/Game/Blueprints/Actors/PlayerStructures/Defenses/BP_Pstruct_Trap_GlueTrap01.BP_Pstruct_Trap_GlueTrap01_C"
+	},
+	"actors": [
+		{
+			"classId": "BP_PStruct_MainTower_C",
+			"actorDisplayName": "BP_PStruct_MainTower0",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 500
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall010",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1000,
+					"y": -1400,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall011",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 800,
+					"y": -1400,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall012",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 800,
+					"y": -1200,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall013",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 800,
+					"y": -1000,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall014",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1000,
+					"y": -1000,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall015",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1200,
+					"y": -1000,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall016",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1000,
+					"y": -800,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Turret01_C",
+			"actorDisplayName": "BP_PStruct_Turret010",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 600,
+					"y": -1400,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 200
+		},
+		{
+			"classId": "BP_Pstruct_Trap_GlueTrap01_C",
+			"actorDisplayName": "BP_Pstruct_Trap_GlueTrap010",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 800,
+					"y": -800,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 200
+		},
+		{
+			"classId": "BP_Pstruct_Trap_GlueTrap01_C",
+			"actorDisplayName": "BP_Pstruct_Trap_GlueTrap011",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 600,
+					"y": -800,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 200
+		},
+		{
+			"classId": "BP_Pstruct_Trap_GlueTrap01_C",
+			"actorDisplayName": "BP_Pstruct_Trap_GlueTrap012",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 600,
+					"y": -600,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 200
+		},
+		{
+			"classId": "BP_Pstruct_Trap_GlueTrap01_C",
+			"actorDisplayName": "BP_Pstruct_Trap_GlueTrap013",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 800,
+					"y": -400,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 200
+		}
+	]
+}

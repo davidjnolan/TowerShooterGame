@@ -1,0 +1,2253 @@
+{
+	"schemaVersion": 1,
+	"name": "CrowdNavigationThinCorridor",
+	"sourceMap": "Map_TestArena3_Corridor",
+	"classes":
+	{
+		"BP_PStruct_MainTower_C": "/Game/Blueprints/Actors/PlayerStructures/BP_PStruct_MainTower.BP_PStruct_MainTower_C",
+		"BP_PStruct_Wall01_C": "/Game/Blueprints/Actors/PlayerStructures/Defenses/BP_PStruct_Wall01.BP_PStruct_Wall01_C"
+	},
+	"actors": [
+		{
+			"classId": "BP_PStruct_MainTower_C",
+			"actorDisplayName": "BP_PStruct_MainTower0",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 500
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall010",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1400,
+					"y": -2800,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall011",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1400,
+					"y": -2600,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall012",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1400,
+					"y": -2400,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall013",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1400,
+					"y": -2200,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall014",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1400,
+					"y": -2000,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall015",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1400,
+					"y": -1800,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall016",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1400,
+					"y": -1600,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall017",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1400,
+					"y": -1400,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall018",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1400,
+					"y": -1200,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall019",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1400,
+					"y": -1000,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0110",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1400,
+					"y": -800,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0111",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1400,
+					"y": -600,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0112",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1400,
+					"y": -400,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0113",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1400,
+					"y": -200,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0114",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1400,
+					"y": 200,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0115",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1400,
+					"y": 400,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0116",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1400,
+					"y": 600,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0117",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1400,
+					"y": 800,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0118",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1400,
+					"y": 1000,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0119",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1400,
+					"y": 1200,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0120",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1400,
+					"y": 1400,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0121",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1400,
+					"y": 1600,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0122",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1400,
+					"y": 1800,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0123",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1400,
+					"y": 2000,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0124",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1400,
+					"y": 2200,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0125",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1400,
+					"y": 2400,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0126",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1400,
+					"y": 2600,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0127",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1400,
+					"y": 2800,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0128",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 3000,
+					"y": -200,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0129",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 2800,
+					"y": -200,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0130",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 2600,
+					"y": -200,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0131",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 2400,
+					"y": -200,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0132",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 2200,
+					"y": -200,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0133",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 2000,
+					"y": -200,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0134",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1800,
+					"y": -200,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0135",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1600,
+					"y": -200,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0136",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 3000,
+					"y": 200,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0137",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 2800,
+					"y": 200,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0138",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 2600,
+					"y": 200,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0139",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 2400,
+					"y": 200,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0140",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 2200,
+					"y": 200,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0141",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 2000,
+					"y": 200,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0142",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1800,
+					"y": 200,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0143",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1600,
+					"y": 200,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0144",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1600,
+					"y": 400,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0145",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1600,
+					"y": 600,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0146",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1600,
+					"y": 800,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0147",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1600,
+					"y": 1000,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0148",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1600,
+					"y": 1200,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0149",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1600,
+					"y": 1400,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0150",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1600,
+					"y": 1600,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0151",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1600,
+					"y": 1800,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0152",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1600,
+					"y": 2000,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0153",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1600,
+					"y": 2200,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0154",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1600,
+					"y": 2400,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0155",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1600,
+					"y": 2600,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0156",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1600,
+					"y": 2800,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0157",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1600,
+					"y": -400,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0158",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1600,
+					"y": -600,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0159",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1600,
+					"y": -800,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0160",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1600,
+					"y": -1000,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0161",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1600,
+					"y": -1200,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0162",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1600,
+					"y": -1400,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0163",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1600,
+					"y": -1600,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0164",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1600,
+					"y": -1800,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0165",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1600,
+					"y": -2000,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0166",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1600,
+					"y": -2200,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0167",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1600,
+					"y": -2400,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0168",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1600,
+					"y": -2600,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0169",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1600,
+					"y": -2800,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0170",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1800,
+					"y": -400,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0171",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 2000,
+					"y": -400,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0172",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 2200,
+					"y": -400,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0173",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 2000,
+					"y": -600,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0174",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1800,
+					"y": -600,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0175",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1800,
+					"y": -800,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0176",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 2200,
+					"y": 400,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0177",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 2000,
+					"y": 400,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0178",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1800,
+					"y": 400,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0179",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 2000,
+					"y": 600,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0180",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1800,
+					"y": 600,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		},
+		{
+			"classId": "BP_PStruct_Wall01_C",
+			"actorDisplayName": "BP_PStruct_Wall0181",
+			"transform":
+			{
+				"rotation":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation":
+				{
+					"x": 1800,
+					"y": 800,
+					"z": 0
+				},
+				"scale3D":
+				{
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"health": 100
+		}
+	]
+}
