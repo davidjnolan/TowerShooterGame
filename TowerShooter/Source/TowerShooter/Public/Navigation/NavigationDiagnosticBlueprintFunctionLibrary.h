@@ -106,6 +106,30 @@ public:
         const FVector& Destination);
 
     /**
+     * Returns a readable snapshot of the controller's Detour Crowd configuration and runtime state.
+     *
+     * Reports whether crowd simulation and obstacle avoidance are enabled/active, together with
+     * the principal CrowdFollowing tuning values used during movement investigations.
+     * Returns an error string if the controller is invalid or does not use a CrowdFollowingComponent.
+     */
+    UFUNCTION(BlueprintPure, Category = "Navigation|Debug|Crowd")
+    static FString GetCrowdFollowingDebugInfo(AAIController* AIController);
+
+    /**
+     * Reads the current velocity and requested move direction exposed by CrowdFollowingComponent.
+     *
+     * Outputs are reset to zero before validation so failed Blueprint calls cannot retain stale data.
+     * This is diagnostic state only and should not be used to drive gameplay movement.
+     *
+     * @return True when the controller owns a CrowdFollowingComponent and values were read.
+     */
+    UFUNCTION(BlueprintPure, Category = "Navigation|Debug|Crowd")
+    static bool GetCrowdMovementDebugInfo(
+        AAIController* AIController,
+        FVector& CrowdAgentVelocity,
+        FVector& CrowdMoveDirection);
+
+    /**
      * Deep diagnostic for the hand-off between AI pathfinding and path following.
      *
      * The function manually builds a normal FAIMoveRequest, asks the controller to

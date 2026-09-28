@@ -4,6 +4,7 @@
 
 #include "AIController.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "Navigation/CrowdFollowingComponent.h"
 #include "Navigation/PathFollowingComponent.h"
 #include "NavigationData.h"
 #include "NavigationPath.h"
@@ -323,6 +324,151 @@ FString UNavigationDiagnosticBlueprintFunctionLibrary::GetAIMoveQueryDebugInfo(
         NumPathPoints
     );
 }
+
+
+// Capture Detour Crowd configuration and runtime state for Blueprint-side diagnostics.
+// This intentionally reports both enabled and active state because they are not always equivalent.
+FString UNavigationDiagnosticBlueprintFunctionLibrary::GetCrowdFollowingDebugInfo(AAIController* AIController)
+{
+    // Make sure we were given a valid AI Controller.
+    if (!AIController)
+    {
+        return TEXT("ERROR: AIController is null");
+    }
+
+
+    // Get the controller's Path Following Component and check that it
+    // is actually a CrowdFollowingComponent.
+    UCrowdFollowingComponent* CrowdComp =
+        Cast<UCrowdFollowingComponent>(
+            AIController->GetPathFollowingComponent());
+
+    if (!CrowdComp)
+    {
+        return TEXT(
+            "ERROR: PathFollowingComponent is not a CrowdFollowingComponent");
+    }
+
+
+    // Convert the avoidance quality enum into something readable.
+    FString AvoidanceQualityString;
+
+    switch (CrowdComp->GetCrowdAvoidanceQuality())
+    {
+        case ECrowdAvoidanceQuality::Low:
+            AvoidanceQualityString = TEXT("Low");
+            break;
+
+        case ECrowdAvoidanceQuality::Medium:
+            AvoidanceQualityString = TEXT("Medium");
+            break;
+
+        case ECrowdAvoidanceQuality::Good:
+            AvoidanceQualityString = TEXT("Good");
+            break;
+
+        case ECrowdAvoidanceQuality::High:
+            AvoidanceQualityString = TEXT("High");
+            break;
+
+        default:
+            AvoidanceQualityString = TEXT("Unknown");
+            break;
+    }
+
+
+    // Build one formatted string containing all the settings
+    // we currently care about.
+    return FString::Printf(
+        TEXT(
+            "Crowd Simulation Enabled: %s\n"
+            "Crowd Simulation Active: %s\n"
+            "Avoidance Quality: %s\n"
+            "Obstacle Avoidance Enabled: %s\n"
+            "Obstacle Avoidance Active: %s\n"
+            "Avoidance Range Multiplier: %.2f\n"
+            "Collision Query Range: %.2f\n"
+            "Separation Enabled: %s\n"
+            "Separation Active: %s\n"
+            "Separation Weight: %.2f\n"
+            "Anticipate Turns Enabled: %s\n"
+            "Optimize Visibility Enabled: %s\n"
+            "Optimize Topology Enabled: %s\n"
+            "Path Offset Enabled: %s\n"
+            "Path Optimization Range: %.2f"
+        ),
+
+        CrowdComp->IsCrowdSimulationEnabled()
+            ? TEXT("True") : TEXT("False"),
+
+        CrowdComp->IsCrowdSimulationActive()
+            ? TEXT("True") : TEXT("False"),
+
+        *AvoidanceQualityString,
+
+        CrowdComp->IsCrowdObstacleAvoidanceEnabled()
+            ? TEXT("True") : TEXT("False"),
+
+        CrowdComp->IsCrowdObstacleAvoidanceActive()
+            ? TEXT("True") : TEXT("False"),
+
+        CrowdComp->GetCrowdAvoidanceRangeMultiplier(),
+
+        CrowdComp->GetCrowdCollisionQueryRange(),
+
+        CrowdComp->IsCrowdSeparationEnabled()
+            ? TEXT("True") : TEXT("False"),
+
+        CrowdComp->IsCrowdSeparationActive()
+            ? TEXT("True") : TEXT("False"),
+
+        CrowdComp->GetCrowdSeparationWeight(),
+
+        CrowdComp->IsCrowdAnticipateTurnsEnabled()
+            ? TEXT("True") : TEXT("False"),
+
+        CrowdComp->IsCrowdOptimizeVisibilityEnabled()
+            ? TEXT("True") : TEXT("False"),
+
+        CrowdComp->IsCrowdOptimizeTopologyEnabled()
+            ? TEXT("True") : TEXT("False"),
+
+        CrowdComp->IsCrowdPathOffsetEnabled()
+            ? TEXT("True") : TEXT("False"),
+
+        CrowdComp->GetCrowdPathOptimizationRange()
+    );
+}
+
+
+bool UNavigationDiagnosticBlueprintFunctionLibrary::GetCrowdMovementDebugInfo(
+    AAIController* AIController,
+    FVector& CrowdAgentVelocity,
+    FVector& CrowdMoveDirection)
+{
+    CrowdAgentVelocity = FVector::ZeroVector;
+    CrowdMoveDirection = FVector::ZeroVector;
+
+    if (!AIController)
+    {
+        return false;
+    }
+
+    UCrowdFollowingComponent* CrowdComp =
+        Cast<UCrowdFollowingComponent>(
+            AIController->GetPathFollowingComponent());
+
+    if (!CrowdComp)
+    {
+        return false;
+    }
+
+    CrowdAgentVelocity = CrowdComp->GetCrowdAgentVelocity();
+    CrowdMoveDirection = CrowdComp->CrowdAgentMoveDirection;
+
+    return true;
+}
+
 
 
 // Deep diagnostic: manually reproduce the pathfinding-to-PathFollowing hand-off.

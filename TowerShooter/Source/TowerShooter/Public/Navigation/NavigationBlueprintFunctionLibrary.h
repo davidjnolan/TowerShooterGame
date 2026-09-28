@@ -155,30 +155,23 @@ public:
     static bool SetCrowdSimulationEnabled(
         AAIController* AIController,
         bool bEnabled);
-    
-    UFUNCTION(BlueprintCallable, Category = "AI|Navigation|Crowd|Debug")
-    static FString GetCrowdFollowingDebugInfo(AAIController* AIController);
 
 
-    UFUNCTION(BlueprintCallable, Category = "AI|Navigation|Crowd|Debug")
-    static bool GetCrowdMovementDebugInfo(
-        AAIController* AIController,
-        FVector& CrowdAgentVelocity,
-        FVector& CrowdMoveDirection);
-
-
+    /** Sets the Detour Crowd avoidance sampling quality and immediately updates the registered crowd agent. */
     UFUNCTION(BlueprintCallable, Category = "AI|Navigation|Crowd")
     static bool SetCrowdAvoidanceQuality(
         AAIController* AIController,
         ECrowdAvoidanceQualityBP Quality);
     
     
+    /** Enables or disables Detour Crowd separation for this controller. */
     UFUNCTION(BlueprintCallable, Category = "AI|Navigation|Crowd")
     static bool SetCrowdSeparation(
         AAIController* AIController,
         bool bEnable);
     
     
+    /** Sets the strength of Detour Crowd separation and immediately updates the registered crowd agent. */
     UFUNCTION(BlueprintCallable, Category = "AI|Navigation|Crowd")
     static bool SetCrowdSeparationWeight(
         AAIController* AIController,
@@ -201,12 +194,14 @@ public:
         AAIController* AIController,
         bool bEnable);
 
+    /** Sets how far Detour Crowd queries for nearby collision/avoidance data and immediately updates the agent. */
     UFUNCTION(BlueprintCallable, Category = "AI|Navigation|Crowd")
     static bool SetCrowdCollisionQueryRange(
         AAIController* AIController,
         float Range);
 
     
+    /** Scales this agent's Detour Crowd avoidance range and immediately updates the registered crowd agent. */
     UFUNCTION(BlueprintCallable, Category = "AI|Navigation|Crowd")
     static bool SetCrowdAvoidanceRangeMultiplier(
         AAIController* AIController,
