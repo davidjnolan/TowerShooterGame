@@ -9,14 +9,15 @@ public class TowerShooter : ModuleRules
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
 		PublicDependencyModuleNames.AddRange(new string[] { 
+			"AIModule",
 			"Core",
 			"CoreUObject",
 			"Engine",
+			"EnhancedInput",
 			"InputCore",
 			"GameplayTags",
 			"Json",
-			"NavigationSystem",
-			"AIModule"
+			"NavigationSystem"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] { 
